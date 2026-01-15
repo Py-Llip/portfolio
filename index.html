@@ -8,51 +8,47 @@
     <script src="https://kit.fontawesome.com/6a521e6aa7.js" crossorigin="anonymous"></script>
 </head>
 <body onresize="mudouTamanho()">
-    <header>
-        <h1 id="logo">Minha logo</h1>
-        <nav>
-            <i class="fa-solid fa-ellipsis-vertical" onclick="clickMenu()" id="menu"></i>
-            <ul id="items">
-                <li><a href="#">Lar</a></li>
-                <li><a href="#">Página1</a></li>
-                <li><a href="#">Página2</a></li>
-                <li><a href="#">Página3</a></li>
-                <li><a href="#">Página4</a></li>
-
-            </ul>
-            <button id="theme">Theme</button>
-        </nav>
-    </header>
-    <main>
-        <section id="about">
-            <div class="text">
-                <h1>Sobre</h1>
-                <h2>Subtítulo</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, placeat eius quo ullam ratione temporibus fuga officia doloribus repudiandae? Iste, culpa. Possimus doloribus rerum quasi eligendi magni sequi iure itaque.</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda enim quod minima rerum ut dolores eum nobis, suscipit incidunt quo temporibus, doloremque voluptatibus ab velit vero. Incidunt minima qui reprehenderit. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro saepe dolore obcaecati voluptatem sunt iure! Labore impedit repellendus culpa, quae ea natus fugit a, molestias libero necessitatibus error doloribus voluptatum.</p>
-            </div>
-            <figure>
-                <figcaption>Fellipe Alves</figcaption>
-            </figure>
-        </section>
-    </main>
-    <footer>
-
-    </footer>
+    <div id="template">
+        <header>
+            <h1 id="logo">Meu Portifólio</h1>
+            <nav>
+                <i class="fa-solid fa-ellipsis-vertical" onclick="clickMenu()" id="menu"></i>
+                <ul id="items">
+                    <li><a href="#"><i class="fa-solid fa-house"></i>Lar</a></li>
+                    <li><a href="#"><i class="fa-solid fa-brain"></i>Skills</a></li>
+                    <li><a href="#"><i class="fa-solid fa-diagram-project"></i>Projetos</a></li>
+                </ul>
+                <button id="theme">Theme</button>
+            </nav>
+        </header>
+        <main>
+            <section id="about">
+                <div class="text">
+                    <h1>Sobre</h1>
+                    <h2>Subtítulo</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, placeat eius quo ullam ratione temporibus fuga officia doloribus repudiandae? Iste, culpa. Possimus doloribus rerum quasi eligendi magni sequi iure itaque.</p>
+                    <br>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda enim quod minima rerum ut dolores eum nobis, suscipit incidunt quo temporibus, doloremque voluptatibus ab velit vero. Incidunt minima qui reprehenderit. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro saepe dolore obcaecati voluptatem sunt iure! Labore impedit repellendus culpa, quae ea natus fugit a, molestias libero necessitatibus error doloribus voluptatum.</p>
+                </div>
+                <figure>
+                    <figcaption>Fellipe Alves</figcaption>
+                </figure>
+            </section>
+        </main>
+        <footer>
+        </footer>
+    </div>
     <script>
         function mudouTamanho() {
             if (window.innerWidth >= 768) {
                 menu.style.display = 'none'
                 items.style.display = 'flex';
                 items.style.position = 'static';
-                items.style.gap = '0px';
                 items.style.justifyContent = 'space-between';
                 items.style.backgroundColor = 'transparent';
-                items.style.width = '50vw';
             } else {
-                items.style.display = 'none'
-                menu.style.display = 'block'
-                items.style.width = 'inherit';
+                items.style.display = 'none';
+                menu.style.display = 'block';
             }
         }
 
@@ -62,7 +58,6 @@
             } else {
                 items.style.display = 'flex';
                 items.style.backgroundColor = 'aliceblue';
-                items.style.gap = '30px';
                 items.style.justifyContent = 'normal';
                 items.style.position = 'absolute';
             } 
