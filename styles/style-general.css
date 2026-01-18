@@ -20,6 +20,13 @@ p {
     font-weight: bold;
 }
 
+hr {
+    background-image: radial-gradient(black, transparent 70%);
+    border: none;
+    height: 4px;
+    width: 100%;
+}
+
 i.fa-solid {
     display: inline;
     padding: 10px;
@@ -130,7 +137,7 @@ main {
     background: red url('../images/perfil/terno-semfundo-light.jpg') no-repeat 37% 70% / 800px;
     height: 400px;
     width: 300px;
-    margin: 20px 20px 0 0;
+    margin: 8px 20px 0 0;
     justify-self: end;
     border-radius: 8px;
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
@@ -138,12 +145,15 @@ main {
 
 /*Footer*/
 
+hr#footer {
+    grid-area: 3 / 1 / 4 / -1;
+}
+
 footer {
     grid-area: -2 / 2 / -1 / -2;
     display: grid;
     place-items: center center;
     grid-template: 2fr 1fr / 1fr 1fr;
-    background-color: red;
     height: 200px;
 }
 
@@ -169,12 +179,26 @@ footer #columns h1 {
 
 }
 
-footer #columns a {
+footer a {
     text-decoration: none;
     color: black;
     font-size: 1em;
 }
 
 footer #social {
+    display: flex;
+    column-gap: 10px;
+    justify-content: center;
+    width: 100%;
     order: 1;
+}
+
+footer #social a {
+    font-size: 1.5em;
+    transition: text-shadow 0.5s, transform 0.2s ease;
+}
+
+footer #social a:hover {
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    transform: scale(1.2);
 }
