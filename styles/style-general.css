@@ -136,7 +136,7 @@ main {
 
 #about > figure {
     /*background: red url('../images/perfil/terno-semfundo-light.jpg') no-repeat 37% 70% / 800px;*/
-    height: calc( 0.8 * (100vh - 100px));
+    min-height: calc( 0.8 * (100% - 100px));
     width: 300px;
     justify-self: end;
     border-radius: 8px;
@@ -151,7 +151,6 @@ main {
 #about > figure img {
     width: 250px;
     transform: translateY(30px);
-    /*object-fit: cover;*/
 }
 /*Footer*/
 
@@ -221,6 +220,10 @@ footer #social a:hover {
 }
 
 @media screen  and (max-width: 540px) {
+
+    #about .text {
+        min-width: 0;
+    }
 
     footer {
         grid-template: 1fr 1fr 1fr 1fr / 1fr;
