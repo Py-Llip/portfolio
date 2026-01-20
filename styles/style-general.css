@@ -76,17 +76,25 @@ nav > ul {
     gap: 50px;
     flex-wrap: wrap;
     border-radius: 8px;
-
+    z-index: 1;
 }
 
 nav > ul > li {
     flex: 0 0 30px;
+    
 }
 
 nav > ul a {
     color: black;
     text-decoration: none;
     font-weight: bold;
+}
+nav > ul i {
+    transition: font-size 0.1s ease, padding 0.1s ease;
+}
+nav > ul a:hover i {
+    font-size: 1.5em;
+    padding: 4px;
 }
 
 nav button#theme {
@@ -223,6 +231,10 @@ footer #social a:hover {
 
     #about .text {
         min-width: 0;
+    }
+
+    #about > figure {
+        align-self: start;
     }
 
     footer {

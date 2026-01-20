@@ -84,11 +84,13 @@
         function clickMenu() {
             if (items.style.display == 'flex') {
                 items.style.display = 'none'
+                items.style.padding = 0
             } else {
                 items.style.display = 'flex';
-                items.style.backgroundColor = 'aliceblue';
+                items.style.backgroundColor = 'whitesmoke';
                 items.style.justifyContent = 'normal';
                 items.style.position = 'absolute';
+                items.style.padding = '20px'
             } 
         }
     </script>
