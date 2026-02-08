@@ -47,6 +47,10 @@ p {
     color: var(--color_prussian-blue);
 }
 
+ul {
+    list-style: none;
+}
+
 hr {
     background-image: radial-gradient(black, transparent 70%);
     border: none;
@@ -256,7 +260,69 @@ main {
 /*Section Skills*/
 
 #skills {
+    position: relative;
     grid-area: skills;
+    height: 500px;
+    display: grid;
+    grid-template: 4em 1fr/ 50px 1fr
+}
+
+#skills ul#pct, #skills ul#datas li {
+    display: grid;
+    grid-template-rows: repeat(10, 1fr) 40px;
+    width: 100%;
+}
+
+#skills ul#pct {
+    grid-area: 2 / 1 / -1 / 2;
+}
+
+#skills ul#pct > li::before {
+    content: '';
+    position: absolute;
+    border-top: 2px solid rgba(0, 0, 0, 0.4);
+    width: 100%;
+
+}
+
+#skills ul#datas {
+    grid-area: 2 / 2 / -1 / -1;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: end;
+
+}
+
+#skills ul#datas > li div.bar {
+    height: 100%;
+    width: 100%;
+    border-top-right-radius: 10px;
+    order: -1;
+    grid-row: -1;
+    background-color: var(--color_prussian-blue);
+}
+
+#skills ul#datas > li {
+    border-radius: 0px 0px 10px 10px;
+    width: 100px;
+    height: 100%;
+    
+}
+
+#skills ul#datas > li p {
+    grid-row: -1;
+    display: flex;
+    align-items: center;
+    line-height: 1em;
+    justify-content: center;
+    height: 40px;
+    border: 2px solid black;
+    font-size: 0.8em;
+    order: 0;
+    text-align: center;
+    font-weight: normal;
 }
 
 /*Section Projects*/

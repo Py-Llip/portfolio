@@ -1,0 +1,1 @@
+console.log(`${parseInt( (100 - 80) / 10)} / -4`)
