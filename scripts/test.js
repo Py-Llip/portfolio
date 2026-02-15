@@ -1,1 +1,4 @@
-console.log(`${parseInt( (100 - 80) / 10)} / -4`)
+let l = ['a', 'b', 'c']
+for (let i in l) {
+    console.log(i, l[i])
+}
